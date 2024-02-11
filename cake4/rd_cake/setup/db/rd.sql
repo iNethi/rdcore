@@ -5206,7 +5206,7 @@ CREATE TABLE `vouchers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) DEFAULT NULL,
   `batch` varchar(128) NOT NULL DEFAULT '',
-  `status` enum('new','used','depleted','expired') DEFAULT 'new',
+  `status` enum('new','used','depleted','expired','issued') DEFAULT 'new',
   `perc_time_used` int(6) DEFAULT NULL,
   `perc_data_used` int(6) DEFAULT NULL,
   `last_accept_time` datetime DEFAULT NULL,
@@ -5230,6 +5230,11 @@ CREATE TABLE `vouchers` (
   `data_cap` bigint(20) DEFAULT NULL,
   `time_used` int(12) DEFAULT NULL,
   `time_cap` int(12) DEFAULT NULL,
+  `issued` datetime DEFAULT NULL,
+  `paytype` enum('cash', 'one4you', 'visa', 'mastercard', 'paypal', 'cic') DEFAULT NULL,
+  `voucher_pin` varchar(120) DEFAULT NULL,
+  `phone_number` varchar(20) DEFAULT NULL,
+  `amount` int(2) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `ak_vouchers` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
