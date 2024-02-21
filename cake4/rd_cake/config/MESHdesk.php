@@ -72,7 +72,7 @@ $config['common_node_settings']['syslog3_port']	    = '514';
 
 //Add Advanced Reporting
 $config['common_node_settings']['report_adv_enable']	    = true;
-$config['common_node_settings']['report_adv_proto']	        = 'http';
+$config['common_node_settings']['report_adv_proto']	        = 'https';
 $config['common_node_settings']['report_adv_light']	        = 60;
 $config['common_node_settings']['report_adv_full']	        = 600;
 $config['common_node_settings']['report_adv_sampling']	    = 60;
